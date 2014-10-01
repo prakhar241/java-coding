@@ -21,7 +21,10 @@ public class Algorithms {
         System.out.println("Hello World");
         BinarySearchTree bst = new BinarySearchTree();
         bst.put(5);
-        bst.put(51);
+        bst.put(51);        
+        System.out.println(bst.exists(52));
+        System.out.println(bst.exists(51));
+                
         bst.inorder();
     }
     
