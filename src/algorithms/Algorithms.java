@@ -6,6 +6,11 @@
 package algorithms;
 
 import algorithms.trees.BinarySearchTree;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -17,15 +22,28 @@ public class Algorithms {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Hello World");
+        // TODO code application logic here        
         BinarySearchTree bst = new BinarySearchTree();
-        bst.put(5);
-        bst.put(51);        
-        System.out.println(bst.exists(52));
-        System.out.println(bst.exists(51));
-                
-        bst.inorder();
+        List<Double> keys = new ArrayList<Double>(Arrays.asList(5.0, 51.0, 5.0, 4.0, 7.0, 8.0, 9.0));
+        
+        for (double key: (Iterable<Double>)keys)
+            bst.put(key);
+        
+        
+        System.out.println(bst.exists(52.0));
+        System.out.println(bst.exists(51.0));
+        
+        System.out.println(bst.minimum());
+        System.out.println(bst.floor(6.0));
+        System.out.println(bst.floor(5.0));
+        System.out.println(bst.floor(4.0));
+        
+        System.out.println(bst.ceiling(4.2));
+        System.out.println(bst.ceiling(8.7));
+        System.out.println(bst.ceiling(5.0));
+        System.out.println(bst.ceiling(4.0));
+        System.out.println(bst.ceiling(11.0));
+        System.out.println(bst.ceiling(161.0));
+        
     }
-    
 }
