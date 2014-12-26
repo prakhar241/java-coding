@@ -27,6 +27,9 @@ public interface BinaryTree<Key extends Comparable<Key>> {
     // rank = #keys < key
     public int rank(Key key);
     
+    // Utility operations
+    public boolean hasRootToLeafPathWithSum(double sum);
+    
     // Traversals
     public Iterable<Key> recursiveInorder();
     public Iterable<Key> recursivePreorder();
